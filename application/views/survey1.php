@@ -8,7 +8,7 @@
     <Gather action="/calls/verify_pin" numDigits="1">
         <Say>Welcome to Bryant's Test site</Say>
         <Say>Please enter your four digit pin number</Say>
-    </Gather> -->
+    </Gather>
 
     <Say>Sorry, I didn't get your response.</Say>
     <Redirect>survey1.xml</Redirect>
