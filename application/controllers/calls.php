@@ -46,10 +46,10 @@ class Calls extends CI_Controller
     # @end snippet
     $call_number = $_REQUEST['From'];
     $user = $this->Call->get_user($pin);
-    echo '<Say>'.$user['pin'].'</Say>';
-    echo '<Say>'.$pin.'</Say>';
-    echo '<Say>'.$call_number.'</Say>';
- 		echo '<Say>'.$user['first_name'].'</Say>';
+   //  echo '<Say>'.$user['pin'].'</Say>';
+   //  echo '<Say>'.$pin.'</Say>';
+   //  echo '<Say>'.$call_number.'</Say>';
+ 		// echo '<Say>'.$user['first_name'].'</Say>';
     if ($user['pin'] == $pin)
     {
 			echo '<Gather action="/calls/survey/'.$user['id'].'" numDigits="1">';
@@ -97,8 +97,8 @@ class Calls extends CI_Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     echo '<Response>';
-    $rating = (int) $_REQUEST['Digits'];
-    $this->Call->add_review($id, $rating);
+    // $rating = (int) $_REQUEST['Digits'];
+    // $this->Call->add_review($id, $rating);
     echo '<Say>Thank you for your input. Good bye. </Say>';
  		echo '</Response>';
 	}
