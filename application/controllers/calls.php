@@ -23,8 +23,8 @@ class Calls extends CI_Controller
 		header('Content-type: text/xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 		echo '<Response>';
-    $call_id = $_REQUEST['CallSid'];
-		echo '<Say>'.$call_id.'</Say>';
+    $call_number = $_REQUEST['From'];
+		echo '<Say>'.$call_number.'</Say>';
 		echo '<Gather action="/calls/verify_pin" numDigits="4">';
 		echo '<Say>Welcome to Bryants Test site</Say>';
 		echo '<Say>Please enter your four digit pin number</Say>';
