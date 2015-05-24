@@ -49,10 +49,10 @@ class Calls extends CI_Controller
     echo '<Say>'.$user['pin'].'</Say>';
     echo '<Say>'.$pin.'</Say>';
  		echo '<Say>'.$user['first_name'].'</Say>';
-    // if ($user['pin'] === $pin)
-    // {
-    //     echo '<Say>Welcome'.$user['first_name'].'</Say>';
-    // }
+    if ($user['pin'] === $pin)
+    {
+        echo '<Say>Welcome'.$user['first_name'].'</Say>';
+    }
     // else {
     //     // We'll implement the rest of the functionality in the 
     //     // following sections.
