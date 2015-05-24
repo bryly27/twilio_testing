@@ -7,7 +7,6 @@ class Calls extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Call');
-		$call_number = 0;
 
 	}
 
@@ -47,7 +46,7 @@ class Calls extends CI_Controller
     # @start snippet
     $pin = (int) $_REQUEST['Digits'];
     # @end snippet
-
+    $call_number = $_REQUEST['From'];
     $user = $this->Call->get_user($pin);
     echo '<Say>'.$user['pin'].'</Say>';
     echo '<Say>'.$pin.'</Say>';
@@ -66,7 +65,7 @@ class Calls extends CI_Controller
     	echo '<Redirect>/calls/call_survey1</Redirect>';
     }
     echo '<Say>Sorry, I did not get that.</Say>';
-    echo '<Redirect>/calls/verify_pin</Redirect>';
+    echo '<Redirect>/calls/call_survey1</Redirect>';
  
     echo '</Response>';
 	}
