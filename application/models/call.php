@@ -20,8 +20,8 @@ class Call extends CI_Model {
 
     function add_review($id, $rating)
     {
-        $query("INSERT INTO surveys (rating, user_id) VALUES (?, ?)");
-        $values(array($id, $rating));
+        $query = ("INSERT INTO surveys (rating, user_id) VALUES (?, ?)");
+        $values = (array($id, $rating));
         $this->db->query($query, $values);
     }
 
