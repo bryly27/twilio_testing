@@ -48,7 +48,7 @@ class Calls extends CI_Controller
     $user = $this->Call->get_user($pin);
     echo '<Say>'.$user['pin'].'</Say>';
     echo '<Say>'.$pin.'</Say>';
- 
+ 		echo '<Say>'.$user['first_name'].'</Say>';
     // if ($user['pin'] === $pin)
     // {
     //     echo '<Say>Welcome'.$user['first_name'].'</Say>';
