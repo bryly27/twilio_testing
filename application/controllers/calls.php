@@ -99,9 +99,10 @@ class Calls extends CI_Controller
     echo '<Response>';
     $rating = (int) $_REQUEST['Digits'];
     $call_number = $_REQUEST['From'];
+    $user = $this->Call->get_user_by_id($id);
     $this->Call->add_review($rating, $id);
     echo '<Say>Thank you for your input. Good bye. </Say>';
-    echo '<Sms from="+14152879680" to="'.$call_number.'">Thank you for your call.</Sms>';
+    echo '<Sms from="+14152879680" to="'.$call_number.'">Thank you for your call '.$user['first_name'].'</Sms>';
  		echo '</Response>';
 	}
 
