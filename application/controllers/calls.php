@@ -22,8 +22,8 @@ class Calls extends CI_Controller
 		// $this->load->view('survey1');
 		header('Content-type: text/xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>';
-    $call_id = $_REQUEST['CallSid'];
 		echo '<Response>';
+    $call_id = $_REQUEST['CallSid'];
 		echo '<Say>'.$call_id.'</Say>';
 		echo '<Gather action="/calls/verify_pin" numDigits="4">';
 		echo '<Say>Welcome to Bryants Test site</Say>';
@@ -88,7 +88,7 @@ class Calls extends CI_Controller
 			echo '<Redirect>/calls/call_survey1</Redirect>';
 		}
 		echo '<Say>Sorry, I did not get that.</Say>';
-		echo '<Redirect>/calls/survey</Redirect>'
+		echo '<Redirect>/calls/survey</Redirect>';
 		echo '</Response>';
 	}
 
@@ -98,7 +98,7 @@ class Calls extends CI_Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     echo '<Response>';
-    echo '<Say>Made it here!</Say>'
+    echo '<Say>Made it here!</Say>';
  		echo '</Response>';
 	}
 
