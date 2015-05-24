@@ -42,10 +42,13 @@ class Calls extends CI_Controller
     echo '<Response>';
  
     # @start snippet
-    $user_pushed = (int) $_REQUEST['Digits'];
+    $pin = (int) $_REQUEST['Digits'];
     # @end snippet
+
+    $user = $this->Call->get_user($pin);
+
  
-    if ($user_pushed === 1111)
+    if ($user['pin'] === $pin)
     {
         echo '<Say>You made it</Say>';
     }

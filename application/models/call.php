@@ -13,4 +13,9 @@ class Call extends CI_Model {
     }
      
 
+    function get_user($pin)
+    {
+        return $this->db->query("SELECT * FROM users WHERE users.pin = ?", $pin)->row_array();
+    }
+
 }
