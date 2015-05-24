@@ -98,7 +98,8 @@ class Calls extends CI_Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     echo '<Response>';
-    echo '<'
+    echo '<Say>Made it here!</Say>'
+ 		echo '</Response>';
 	}
 
 
