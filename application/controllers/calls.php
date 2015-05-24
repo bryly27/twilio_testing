@@ -49,7 +49,7 @@ class Calls extends CI_Controller
     echo '<Say>'.$user['pin'].'</Say>';
     echo '<Say>'.$pin.'</Say>';
  		echo '<Say>'.$user['first_name'].'</Say>';
-    if ($user['pin'] === $pin)
+    if ($user['pin'] == $pin)
     {
         echo '<Say>Welcome'.$user['first_name'].'</Say>';
     }
