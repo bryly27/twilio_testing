@@ -52,7 +52,7 @@ class Calls extends CI_Controller
  		echo '<Say>'.$user['first_name'].'</Say>';
     if ($user['pin'] == $pin)
     {
-			echo '<Gather action="/calls/survey/".$pin numDigits="1">';
+			echo '<Gather action="/calls/survey/'.$pin.'" numDigits="1">';
       echo '<Say>If your first name is '.$user['first_name'].', please press 1</Say>';
       echo '<Say>If the information is incorrect, please press 2</Say>';
       echo '</Gather>';
