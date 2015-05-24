@@ -18,10 +18,10 @@ class Call extends CI_Model {
         return $this->db->query("SELECT * FROM users WHERE users.pin = ?", $pin)->row_array();
     }
 
-    function add_review($id, $rating)
+    function add_review($rating, $id)
     {
         $query = ("INSERT INTO surveys (rating, user_id) VALUES (?, ?)");
-        $values = (array($id, $rating));
+        $values = (array($rating, $id));
         $this->db->query($query, $values);
     }
 
