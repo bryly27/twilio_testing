@@ -24,7 +24,7 @@ class Calls extends CI_Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>';
     $call_id = $_REQUEST['CallSid'];
 		echo '<Response>';
-		echo '<Say>'.$call_id.'</Say>'
+		echo '<Say>'.$call_id.'</Say>';
 		echo '<Gather action="/calls/verify_pin" numDigits="4">';
 		echo '<Say>Welcome to Bryants Test site</Say>';
 		echo '<Say>Please enter your four digit pin number</Say>';
