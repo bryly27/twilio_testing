@@ -27,7 +27,7 @@ class Call extends CI_Model {
 
     function get_user_by_id($id)
     {
-        return $this->db->query("SELECT users.first_name FROM users WHERE users.id = ?", $pin)->row_array();
+        return $this->db->query("SELECT users.first_name FROM users WHERE users.id = ?", $id)->row_array();
     }
 
 }
