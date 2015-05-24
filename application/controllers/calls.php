@@ -52,7 +52,7 @@ class Calls extends CI_Controller
  		echo '<Say>'.$user['first_name'].'</Say>';
     if ($user['pin'] == $pin)
     {
-			echo '<Gather action="/calls/survey/'.$pin.'" numDigits="1">';
+			echo '<Gather action="/calls/survey/'.$user['id'].'" numDigits="1">';
       echo '<Say>If your first name is '.$user['first_name'].', please press 1</Say>';
       echo '<Say>If the information is incorrect, please press 2</Say>';
       echo '</Gather>';
@@ -68,7 +68,7 @@ class Calls extends CI_Controller
     echo '</Response>';
 	}
 
-	public function survey($pin)
+	public function survey($id)
 	{
 		header('Content-type: text/xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>';
@@ -76,11 +76,9 @@ class Calls extends CI_Controller
 
 		$number = (int) $_REQUEST['Digits'];
 
-		echo '<Say>'.$pin.'</Say>';
-
 		if($number == 1)
 		{
-			echo '<Gather action="/calls/rating" numDigits="1">';
+			echo '<Gather action="/calls/rating/'.$user['id'].'" numDigits="1">';
 			echo '<Say>Using the keypad, on a scale of 1 to 5 with 5 being the highest, please rate our service.</Say>';
 			echo '</Gather>';
 		}
@@ -93,13 +91,15 @@ class Calls extends CI_Controller
 		echo '</Response>';
 	}
 
-	public function rating()
+	public function rating($id)
 	{
 		header('Content-type: text/xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     echo '<Response>';
-    echo '<Say>Made it here!</Say>';
+    $rating = (int) $_REQUEST['Digits'];
+    $this->Call->add_review($id, $rating);
+    echo '<Say>Thank you for your input. Good bye. </Say>';
  		echo '</Response>';
 	}
 
