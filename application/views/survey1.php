@@ -11,7 +11,7 @@
     </Gather>
 
     <Say>Sorry, I didn't get your response.</Say>
-    <Redirect>survey1.xml</Redirect>
+    <Redirect>/calls/call_survey1</Redirect>
 </Response>
 
  

@@ -19,18 +19,18 @@ class Calls extends CI_Controller
 
 	public function call_survey1()
 	{
-		// $this->load->view('survey1');
-		header('Content-type: text/xml');
-    echo '<?xml version="1.0" encoding="UTF-8"?>';
-echo '<Response>';
-echo '<Gather action="/calls/verify_pin" numDigits="1">';
-echo '<Say>Welcome to Bryants Test site</Say>';
-echo '<Say>Please enter your four digit pin number</Say>';
-echo '</Gather>';
+		$this->load->view('survey1');
+		// header('Content-type: text/xml');
+    
+		// echo '<Response>';
+		// echo '<Gather action="/calls/verify_pin" numDigits="4">';
+		// echo '<Say>Welcome to Bryants Test site</Say>';
+		// echo '<Say>Please enter your four digit pin number</Say>';
+		// echo '</Gather>';
 
-echo '<Say>Sorry, I didnt get your response.</Say>';
+		// echo '<Say>Sorry, I didnt get your response.</Say>';
 // <Redirect></Redirect>
-echo '</Response>';
+		// echo '</Response>';
 
 	}
 
