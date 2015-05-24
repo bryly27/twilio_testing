@@ -46,18 +46,18 @@ class Calls extends CI_Controller
     # @end snippet
 
     $user = $this->Call->get_user($pin);
-
+    echo '<Say>'.$user['pin'].'</Say>'
  
-    if ($user['pin'] === $pin)
-    {
-        echo '<Say>Welcome'.$user['first_name'].'</Say>';
-    }
-    else {
-        // We'll implement the rest of the functionality in the 
-        // following sections.
-        echo "<Say>You didn't make it</Say>";
-        echo '<Redirect>/calls/call_survey1</Redirect>';
-    }
+    // if ($user['pin'] === $pin)
+    // {
+    //     echo '<Say>Welcome'.$user['first_name'].'</Say>';
+    // }
+    // else {
+    //     // We'll implement the rest of the functionality in the 
+    //     // following sections.
+    //     echo "<Say>You didn't make it</Say>";
+    //     echo '<Redirect>/calls/call_survey1</Redirect>';
+    // }
  
     echo '</Response>';
 	}
