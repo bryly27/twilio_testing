@@ -50,7 +50,7 @@ class Calls extends CI_Controller
  
     if ($user['pin'] === $pin)
     {
-        echo '<Say>You made it</Say>';
+        echo '<Say>Welcome'.$user['first_name'].'</Say>';
     }
     else {
         // We'll implement the rest of the functionality in the 
