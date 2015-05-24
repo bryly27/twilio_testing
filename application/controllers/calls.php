@@ -78,16 +78,16 @@ class Calls extends CI_Controller
 
 		if($number == 1)
 		{
-			echo '<Gather action="/calls/rating/'.$user['id'].'" numDigits="1">';
+			echo '<Gather action="/calls/rating/'.$id.'" numDigits="1">';
 			echo '<Say>Using the keypad, on a scale of 1 to 5 with 5 being the highest, please rate our service.</Say>';
 			echo '</Gather>';
 		}
 		else
 		{
-			echo '<Redirect>/calls/call_survey1/'.$user['id'].'</Redirect>';
+			echo '<Redirect>/calls/call_survey1</Redirect>';
 		}
 		echo '<Say>Sorry, I did not get that.</Say>';
-		echo '<Redirect>/calls/survey/'.$user['id'].'</Redirect>';
+		echo '<Redirect>/calls/survey/</Redirect>';
 		echo '</Response>';
 	}
 
@@ -97,8 +97,8 @@ class Calls extends CI_Controller
     echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     echo '<Response>';
-    // $rating = (int) $_REQUEST['Digits'];
-    // $this->Call->add_review($id, $rating);
+    $rating = (int) $_REQUEST['Digits'];
+    $this->Call->add_review($id, $rating);
     echo '<Say>Thank you for your input. Good bye. </Say>';
  		echo '</Response>';
 	}
