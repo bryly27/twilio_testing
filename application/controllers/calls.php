@@ -45,7 +45,7 @@ class Calls extends CI_Controller
     $user_pushed = (int) $_REQUEST['Digits'];
     # @end snippet
  
-    if (count($user_pushed) === 4)
+    if ($user_pushed === 1111)
     {
         echo '<Say>You made it</Say>';
     }
@@ -53,7 +53,7 @@ class Calls extends CI_Controller
         // We'll implement the rest of the functionality in the 
         // following sections.
         echo "<Say>You didn't make it</Say>";
-        echo '<Redirect>handle-incoming-call.php</Redirect>';
+        echo '<Redirect>/calls/call_survey1</Redirect>';
     }
  
     echo '</Response>';
