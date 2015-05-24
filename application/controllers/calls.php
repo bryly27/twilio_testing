@@ -44,7 +44,7 @@ class Calls extends CI_Controller
     # @start snippet
     $pin = (int) $_REQUEST['Digits'];
     # @end snippet
-    $call_number = $_REQUEST['From'];
+    // $call_number = $_REQUEST['From'];
     $user = $this->Call->get_user($pin);
    //  echo '<Say>'.$user['pin'].'</Say>';
    //  echo '<Say>'.$pin.'</Say>';
