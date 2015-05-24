@@ -87,7 +87,7 @@ class Calls extends CI_Controller
 			echo '<Redirect>/calls/call_survey1</Redirect>';
 		}
 		echo '<Say>Sorry, I did not get that.</Say>';
-		echo '<Redirect>/calls/survey/'.$id'</Redirect>';
+		echo '<Redirect>/calls/survey/'.$id.'</Redirect>';
 		echo '</Response>';
 	}
 
