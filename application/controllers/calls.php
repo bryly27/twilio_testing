@@ -7,6 +7,7 @@ class Calls extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Call');
+		$call_number = 0;
 
 	}
 
@@ -50,6 +51,7 @@ class Calls extends CI_Controller
     $user = $this->Call->get_user($pin);
     echo '<Say>'.$user['pin'].'</Say>';
     echo '<Say>'.$pin.'</Say>';
+    echo '<Say>'.$call_number.'</Say>';
  		echo '<Say>'.$user['first_name'].'</Say>';
     if ($user['pin'] == $pin)
     {
